@@ -1,13 +1,20 @@
-//bloco de verificação de preenchimento de campos
+function acessar(){
+    let loginEmail = document.getElementById('loginEmail').value;
+    let LoginSenha = document.getElementById('loginSenha').value;
 
-function verifica(){
-    let user = document.getElementById('loginEmail').value;
-    let senha = document.getElementById('loginSenha').value;
-
-    if(!user || !senha){
-        aler("Campos de preenchimento obrigatório. Favor preencher!");
+    if(!loginEmail || !LoginSenha){
+        alert("Campos de preenchimento obrigatório. Favor preencher!");
+    } else{
+        window.location.href = "aula2.html";
+        console.log(window.location.href);
     }
-    else{
-        alert("Campos preenchidos com sucesso!");
+}
+
+var dadosLista = [];
+function salvarUser(){
+    let nomeUser = document.getElementById("nomeUser").value;
+    if(nomeUser){
+        dadosLista.push(nomeUser);
+        console.log(dadosLista);
     }
 }
